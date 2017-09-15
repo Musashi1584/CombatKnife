@@ -1,0 +1,23 @@
+V3.0 Added new tiered throwing knife models
+V2.9 Added visual throwing knife projectiles
+V2.8 Backstab Visualization(Enemies don't turn to you anymore if attacked with silent takedown active)
+V2.7 Added secondary throwing knives
+V2.6 New takedown visual effect
+V2.5 Made Items LW2 Compatible
+V2.4 New models for all combat knife tiers
+V2.3 Introduced Global Suspicion Level and Suspicion UI
+V2.2 Made ghost effect configurable, added pierce to knife, made throw knife a free action
+V2.1.1 Hide previous tiers when new tier is bought.
+V2.1 Added visual effect for silent takedown
+V2.0 New silent kill and activate pod mechanics
+V1.9.1 Added Grimys Utility Slot Sidearms support  and added cooldown for T1 and T2 combat knives.
+V1.9 Added short range accuracy table to throwing knives
+V1.8 Fixed some raise conditions in silent takedown when using both combat and throwing knives
+V1.7 Nerf to the default values. Removed pierce and shred.
+V1.6 Dedicated throwing knife model and ui icon. Again credits and huge thanks to Synthorange!
+V1.5 Fixed knife rotation for good this time in a much cleaner way. 
+V1.4 Fixed odd knife angle
+V1.3 Added SpecOps Throwing Knife
+V1.2 Alien Hunter DLC Patch Fixes
+V1.1 Takedown gets better through tiers
+V1.0 Initial release
