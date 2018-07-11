@@ -25,6 +25,7 @@ simulated static function PatchMeleeAbilitiesWithBackstabVisualisationFN()
 		if (Template != none &&
 			Template.IsMelee() &&
 			Template.BuildVisualizationFn != none &&
+			Template.DataName != 'DualSlashSecondary' &&
 			InStr(String(Template.BuildVisualizationFn), "Backstab_BuildVisualization") == INDEX_NONE
 			)
 		{
@@ -63,7 +64,7 @@ simulated function Backstab_BuildVisualization(XComGameState VisualizeGameState)
 		OriginalBuildVisualizationFn = default.TemplateDelegates[DelegateIndex].BuildVisualizationFn;
 		OriginalBuildVisualizationFn(VisualizeGameState);
 	}
-	if (SourceUnitState == none)
+	if (SourceUnitState == none || TargetUnitState == none)
 		return;
 	
 	SourceUnitState.GetUnitValue('SilentMelee', SilentMelee);
@@ -75,12 +76,20 @@ simulated function Backstab_BuildVisualization(XComGameState VisualizeGameState)
 	VisMgr.GetNodesOfType(VisMgr.BuildVisTree, class'X2Action_MoveTurn', Nodes, TargetUnitState.GetVisualizer());
 	for(ActionIndex = 0; ActionIndex < Nodes.Length; ++ActionIndex)
 	{
-		
-		VisMgr.DisconnectAction(Nodes[ActionIndex]);
-		for(ChildActionIndex = 0; ChildActionIndex < Nodes[ActionIndex].ChildActions.Length; ++ChildActionIndex)
+		if (Nodes[ActionIndex] != none)
 		{
-			VisMgr.DisconnectAction(Nodes[ActionIndex].ChildActions[ActionIndex]);
-			VisMgr.ConnectAction(Nodes[ActionIndex].ChildActions[ActionIndex], VisMgr.BuildVisTree, false, none, Nodes[ActionIndex].ParentActions);
+			VisMgr.DisconnectAction(Nodes[ActionIndex]);
+
+			// Reparent childs
+			for(ChildActionIndex = 0; ChildActionIndex < Nodes[ActionIndex].ChildActions.Length; ++ChildActionIndex)
+			{
+				if (Nodes[ActionIndex].ChildActions[ChildActionIndex] != none)
+				{
+					`LOG(GetFuncName() @ Nodes[ActionIndex] @ Nodes[ActionIndex].ChildActions[ChildActionIndex],, 'CombatKnife');
+					VisMgr.DisconnectAction(Nodes[ActionIndex].ChildActions[ChildActionIndex]);
+					VisMgr.ConnectAction(Nodes[ActionIndex].ChildActions[ChildActionIndex], VisMgr.BuildVisTree, false, none, Nodes[ActionIndex].ParentActions);
+				}
+			}
 		}
 	}
 }

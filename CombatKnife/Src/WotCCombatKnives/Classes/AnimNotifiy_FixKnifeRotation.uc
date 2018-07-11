@@ -7,6 +7,9 @@ event Notify(Actor Owner, AnimNodeSequence AnimSeqInstigator)
 	local XComUnitPawn Pawn;
 	local XComGameState_Unit UnitState;
 
+	// i use the disgnated socket KinefSheath now so no need for rotation manually anymore
+	return;
+
 	Pawn = XComUnitPawn(Owner);
 	if (Pawn != none)
 	{

@@ -24,8 +24,8 @@ static function array<X2DataTemplate> CreateTemplates()
 	local array<X2DataTemplate> Schematics;
 	
 	// Weapon Schematics
-	Schematics.AddItem(CreateTemplate_ThrowingKnife_MG_Secondary_Schematic());
-	Schematics.AddItem(CreateTemplate_ThrowingKnife_BM_Secondary_Schematic());
+	//Schematics.AddItem(CreateTemplate_ThrowingKnife_MG_Secondary_Schematic());
+	//Schematics.AddItem(CreateTemplate_ThrowingKnife_BM_Secondary_Schematic());
 
 	Schematics.AddItem(CreateTemplate_ThrowingKnife_CV_Schematic());
 	Schematics.AddItem(CreateTemplate_ThrowingKnife_MG_Schematic());
@@ -160,7 +160,7 @@ static function X2DataTemplate CreateTemplate_ThrowingKnife_MG_Schematic()
 	`CREATE_X2TEMPLATE(class'X2SchematicTemplate', Template, 'ThrowingKnife_MG_Schematic');
 
 	Template.ItemCat = 'weapon';
-	Template.strImage = "img:///CombatKnifeMod.Textures.ui_throwingknife";
+	Template.strImage = "img:///CombatKnifeMod.UI.UI_Kunai_MG";
 	Template.CanBeBuilt = true;
 	Template.bOneTimeBuild = true;
 	Template.HideInInventory = true;
@@ -199,7 +199,7 @@ static function X2DataTemplate CreateTemplate_ThrowingKnife_BM_Schematic()
 	`CREATE_X2TEMPLATE(class'X2SchematicTemplate', Template, 'ThrowingKnife_BM_Schematic');
 
 	Template.ItemCat = 'weapon';
-	Template.strImage = "img:///CombatKnifeMod.Textures.ui_throwingknife";
+	Template.strImage = "img:///CombatKnifeMod.UI.UI_Kunai_BM";
 	Template.CanBeBuilt = true;
 	Template.bOneTimeBuild = true;
 	Template.HideInInventory = true;

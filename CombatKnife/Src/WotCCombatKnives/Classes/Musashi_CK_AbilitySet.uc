@@ -634,7 +634,7 @@ static function X2AbilityTemplate BackStabber()
 {
 	local X2AbilityTemplate Template;
 
-	Template = PurePassive('BackStabber', "img:///CombatKnifeMod.UIPerk_takedown", false, 'eAbilitySource_Perk');
+	Template = PurePassive('BackStabber', "img:///CombatKnifeMod.UI.UIPerk_backstabber", false, 'eAbilitySource_Perk');
 	Template.AdditionalAbilities.AddItem('MusashiKnifeSpecialistBonus');
 	Template.AdditionalAbilities.AddItem('MusashiKnifeSpecialistCooldown');
 	return Template;

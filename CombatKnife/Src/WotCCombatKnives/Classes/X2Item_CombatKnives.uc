@@ -58,7 +58,7 @@ static function X2DataTemplate CreateTemplate_SpecOpsKnife_CV()
 	Template.strImage = "img:///CombatKnifeMod.Textures.ui_knife";
 	Template.EquipSound = "Sword_Equip_Conventional";
 	Template.InventorySlot = eInvSlot_SecondaryWeapon;
-	Template.StowedLocation = eSlot_RightBack;
+	//Template.StowedLocation = eSlot_RightBack;
 	// This all the resources; sounds, animations, models, physics, the works.
 	Template.GameArchetype = "XComWeapon'CombatKnifeMod.Archetypes.wp_so_knife'";
 	
@@ -128,7 +128,7 @@ static function X2DataTemplate CreateTemplate_SpecOpsKnife_MG()
 	Template.strImage = "img:///CombatKnifeMod.Textures.ui_Knife_MG";
 	Template.EquipSound = "Sword_Equip_Conventional";
 	Template.InventorySlot = eInvSlot_SecondaryWeapon;
-	Template.StowedLocation = eSlot_RightBack;
+	//Template.StowedLocation = eSlot_RightBack;
 	// This all the resources; sounds, animations, models, physics, the works.
 	Template.GameArchetype = "XComWeapon'CombatKnifeMod.Archetypes.wp_so_knife_mg'";
 	
@@ -201,7 +201,7 @@ static function X2DataTemplate CreateTemplate_SpecOpsKnife_BM()
 	Template.strImage = "img:///CombatKnifeMod.Textures.ui_Knife_BM";
 	Template.EquipSound = "Sword_Equip_Conventional";
 	Template.InventorySlot = eInvSlot_SecondaryWeapon;
-	Template.StowedLocation = eSlot_RightBack;
+	//Template.StowedLocation = eSlot_RightBack;
 	// This all the resources; sounds, animations, models, physics, the works.
 	Template.GameArchetype = "XComWeapon'CombatKnifeMod.Archetypes.wp_so_knife_bm'";
 	

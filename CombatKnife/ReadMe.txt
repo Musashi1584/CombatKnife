@@ -1,7 +1,5 @@
 ﻿[h1]Adds a combat knife and a throwing knife for all tiers to the game.[/h1]
 
-War of the Chosen Edition.
-
 [code]
 [b][u]SpecOps Throwing Knife[/u][/b]
 Aim: 5
@@ -53,7 +51,7 @@ Sound Range: 0
 
 [b][u]SpecOps Alloy Combat Knife[/u][/b]
 Aim: 25
-Damage: 3-5 (6-8 LW2)
+Damage: 3-5
 Pierce: 2
 Shred: 0
 Crit Damage: 7
@@ -65,7 +63,7 @@ Sound Range: 0
 
 [b][u]SpecOps Plasma Combat Knife[/u][/b]
 Aim: 25
-Damage: 4-6 (8-10 LW2)
+Damage: 4-6
 Pierce: 3
 Shred: 0
 Crit Damage: 9
