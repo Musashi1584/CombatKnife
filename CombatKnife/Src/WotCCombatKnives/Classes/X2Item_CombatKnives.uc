@@ -1,5 +1,7 @@
 class X2Item_CombatKnives extends X2Item config(CombatKnifeMod);
 
+var config bool bHidePreviousTiers;
+
 var config name LW2_KNIFE_CATEGORY;
 var config bool SHEATH_VISIBLE;
 
@@ -105,7 +107,8 @@ static function X2DataTemplate CreateTemplate_SpecOpsKnife_CV()
 	Template.Abilities.AddItem('SilentTakedown');
 	Template.SetUIStatMarkup(class'XLocalizedData'.default.MobilityLabel, eStat_Mobility, class'Musashi_CK_AbilitySet'.default.COMBAT_KNIFE_MOBILITY_BONUS);
 
-	Template.HideIfPurchased = 'SpecOpsKnife_MG_Schematic';
+	if (default.bHidePreviousTiers)
+		Template.HideIfPurchased = 'SpecOpsKnife_MG_Schematic';
 
 	if (IsLW2Installed())
 	{
@@ -178,7 +181,8 @@ static function X2DataTemplate CreateTemplate_SpecOpsKnife_MG()
 	Template.Abilities.AddItem('SilentTakedown');
 	Template.SetUIStatMarkup(class'XLocalizedData'.default.MobilityLabel, eStat_Mobility, class'Musashi_CK_AbilitySet'.default.COMBAT_KNIFE_MOBILITY_BONUS);
 
-	Template.HideIfPurchased = 'SpecOpsKnife_BM_Schematic';
+	if (default.bHidePreviousTiers)
+		Template.HideIfPurchased = 'SpecOpsKnife_BM_Schematic';
 
 	if (IsLW2Installed())
 	{

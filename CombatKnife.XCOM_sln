@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # XCOM ModBuddy Solution File, Format Version 11.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CombatKnife", "CombatKnife\CombatKnife.x2proj", "{EBE50FC4-34B3-4266-B74A-EF83A6D2480F}"
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CombatKnife", "CombatKnife\CombatKnife.x2proj", "{524C5521-67AC-417D-8124-CE7426ECC6D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Default|XCOM 2 = Default|XCOM 2
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EBE50FC4-34B3-4266-B74A-EF83A6D2480F}.Debug|XCOM 2.ActiveCfg = Debug|XCOM 2
-		{EBE50FC4-34B3-4266-B74A-EF83A6D2480F}.Debug|XCOM 2.Build.0 = Debug|XCOM 2
-		{EBE50FC4-34B3-4266-B74A-EF83A6D2480F}.Default|XCOM 2.ActiveCfg = Default|XCOM 2
-		{EBE50FC4-34B3-4266-B74A-EF83A6D2480F}.Default|XCOM 2.Build.0 = Default|XCOM 2
+		{524C5521-67AC-417D-8124-CE7426ECC6D1}.Debug|XCOM 2.ActiveCfg = Debug|XCOM 2
+		{524C5521-67AC-417D-8124-CE7426ECC6D1}.Debug|XCOM 2.Build.0 = Debug|XCOM 2
+		{524C5521-67AC-417D-8124-CE7426ECC6D1}.Default|XCOM 2.ActiveCfg = Default|XCOM 2
+		{524C5521-67AC-417D-8124-CE7426ECC6D1}.Default|XCOM 2.Build.0 = Default|XCOM 2
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

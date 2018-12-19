@@ -1,5 +1,7 @@
 class X2Item_ThrowingKnives extends X2Item config(CombatKnifeMod);
 
+var config bool bHidePreviousTiers;
+
 var config array<int> SHORT_CONVENTIONAL_RANGE;
 
 var config WeaponDamageValue THROWING_KNIFE_BASEDAMAGE;
@@ -89,7 +91,8 @@ static function X2DataTemplate CreateTemplate_ThrowingKnife_CV()
 
 	Template.SetAnimationNameForAbility('Hailstorm', 'FF_HailStormA');
 
-	Template.HideIfPurchased = 'ThrowingKnife_MG_Schematic';
+	if (default.bHidePreviousTiers)
+		Template.HideIfPurchased = 'ThrowingKnife_MG_Schematic';
 
 	return Template;
 }
@@ -151,7 +154,8 @@ static function X2DataTemplate CreateTemplate_ThrowingKnife_MG()
 
 	Template.SetAnimationNameForAbility('Hailstorm', 'FF_HailStormA');
 
-	Template.HideIfPurchased = 'ThrowingKnife_BM_Schematic';
+	if (default.bHidePreviousTiers)
+		Template.HideIfPurchased = 'ThrowingKnife_BM_Schematic';
 
 	return Template;
 }

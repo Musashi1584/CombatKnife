@@ -69,7 +69,7 @@ static function UpdateStorage()
 	local int i;
 
 	History = `XCOMHISTORY;
-	NewGameState = class'XComGameStateContext_ChangeContainer'.static.CreateChangeState("Musashi: Updating HQ Storage to add CombatKnife");
+	NewGameState = class'XComGameStateContext_ChangeContainer'.static.CreateChangeState("Updating HQ Storage to add CombatKnife");
 	XComHQ = XComGameState_HeadquartersXCom(History.GetSingleGameStateObjectForClass(class'XComGameState_HeadquartersXCom'));
 	XComHQ = XComGameState_HeadquartersXCom(NewGameState.CreateStateObject(class'XComGameState_HeadquartersXCom', XComHQ.ObjectID));
 	NewGameState.AddStateObject(XComHQ);
@@ -83,19 +83,17 @@ static function UpdateStorage()
 		{
 			if (!XComHQ.HasItem(ItemTemplates[i]))
 			{
-				`Log("Musashi : " @ ItemTemplates[i].GetItemFriendlyName() @ " not found, adding to inventory",, 'CombatKnife');
+				`Log(ItemTemplates[i].GetItemFriendlyName() @ " not found, adding to inventory",, 'CombatKnife');
 				NewItemState = ItemTemplates[i].CreateInstanceFromTemplate(NewGameState);
 				NewGameState.AddStateObject(NewItemState);
 				XComHQ.AddItemToHQInventory(NewItemState);
-				History.AddGameStateToHistory(NewGameState);
 			} else {
-				`Log("Musashi : " @ ItemTemplates[i].GetItemFriendlyName() @ " found, skipping inventory add",, 'CombatKnife');
-				History.CleanupPendingGameState(NewGameState);
+				`Log(ItemTemplates[i].GetItemFriendlyName() @ " found, skipping inventory add",, 'CombatKnife');
 			}
 		}
 	}
-	
-	//schematics should be handled already, as the BuildItem UI draws from ItemTemplates, which are automatically loaded
+
+	History.AddGameStateToHistory(NewGameState);
 }
 
 static function bool IsModInstalled(string DLCIdentifier)
