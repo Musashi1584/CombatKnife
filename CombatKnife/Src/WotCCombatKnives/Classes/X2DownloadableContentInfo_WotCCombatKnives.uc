@@ -39,8 +39,6 @@ static event OnPostTemplatesCreated()
 			Template.AbilityCooldown = MusashiCooldown;
 		}
 	}
-	
-	class'X2Ability_DefaultAbilitySet_BackstabOverwrite'.static.PatchMeleeAbilitiesWithBackstabVisualisationFN();
 }
 
 
@@ -132,7 +130,7 @@ static function string DLCAppendSockets(XComUnitPawn Pawn)
 	local string DefaultString, ReturnString;
 	local XComHumanPawn HumanPawn;
 
-	`LOG("DLCAppendSockets" @ Pawn,, 'SpecOpsKnifes');
+	//`LOG("DLCAppendSockets" @ Pawn,, 'SpecOpsKnifes');
 
 	HumanPawn = XComHumanPawn(Pawn);
 	if (HumanPawn == none) { return ""; }
@@ -140,7 +138,7 @@ static function string DLCAppendSockets(XComUnitPawn Pawn)
 	TorsoName = HumanPawn.m_kAppearance.nmTorso;
 	bIsFemale = HumanPawn.m_kAppearance.iGender == eGender_Female;
 
-	`LOG("DLCAppendSockets: Torso= " $ TorsoName $ ", Female= " $ string(bIsFemale),, 'SpecOpsKnifes');
+	//`LOG("DLCAppendSockets: Torso= " $ TorsoName $ ", Female= " $ string(bIsFemale),, 'SpecOpsKnifes');
 
 	foreach default.SocketReplacements(SocketReplacement)
 	{
@@ -162,7 +160,7 @@ static function string DLCAppendSockets(XComUnitPawn Pawn)
 		// did not find, so use default
 		ReturnString = DefaultString;
 	}
-	`LOG("Returning mesh string: " $ ReturnString,, 'LegendaryGear');
+	//`LOG("Returning mesh string: " $ ReturnString,, 'SpecOpsKnifes');
 
 	return ReturnString;
 }

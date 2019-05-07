@@ -49,9 +49,6 @@ tags=weapon</Description>
     <Content Include="Config\XComEngine.ini" />
     <Content Include="Config\XComGame.ini" />
     <Content Include="Localization\XComGame.int" />
-    <Content Include="Src\WotCCombatKnives\Classes\AnimNotifiy_FixKnifeRotation.uc">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="Src\WotCCombatKnives\Classes\Musashi_AbilityCooldown.uc">
       <SubType>Content</SubType>
     </Content>
@@ -74,9 +71,6 @@ tags=weapon</Description>
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\WotCCombatKnives\Classes\X2AbilityCost_ThrowingKnifeQuickdrawActionPoints.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\WotCCombatKnives\Classes\X2Ability_DefaultAbilitySet_BackstabOverwrite.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\WotCCombatKnives\Classes\X2DownloadableContentInfo_WotCCombatKnives.uc" />

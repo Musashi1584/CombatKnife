@@ -50,6 +50,7 @@ static function array<X2DataTemplate> CreateTemplates()
 static function X2DataTemplate CreateTemplate_SpecOpsKnife_CV()
 {
 	local X2WeaponTemplate Template;
+	local AltGameArchetypeUse ConcealedArchetype;
 	
 	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'SpecOpsKnife_CV');
 	
@@ -62,8 +63,7 @@ static function X2DataTemplate CreateTemplate_SpecOpsKnife_CV()
 	Template.InventorySlot = eInvSlot_SecondaryWeapon;
 	//Template.StowedLocation = eSlot_RightBack;
 	// This all the resources; sounds, animations, models, physics, the works.
-	Template.GameArchetype = "XComWeapon'CombatKnifeMod.Archetypes.wp_so_knife'";
-	
+	Template.GameArchetype = "CombatKnifeMod.Archetypes.wp_so_knife";
 	Template.Tier = 0;
 	
 	Template.iRadius = 1;
@@ -106,6 +106,8 @@ static function X2DataTemplate CreateTemplate_SpecOpsKnife_CV()
 	Template.Abilities.AddItem('MusashiCombatKnifeBonus');
 	Template.Abilities.AddItem('SilentTakedown');
 	Template.SetUIStatMarkup(class'XLocalizedData'.default.MobilityLabel, eStat_Mobility, class'Musashi_CK_AbilitySet'.default.COMBAT_KNIFE_MOBILITY_BONUS);
+
+	//Template.SetAnimationNameForAbility('SilentTakedown', 'FF_MeleeTakeDownA');
 
 	if (default.bHidePreviousTiers)
 		Template.HideIfPurchased = 'SpecOpsKnife_MG_Schematic';
