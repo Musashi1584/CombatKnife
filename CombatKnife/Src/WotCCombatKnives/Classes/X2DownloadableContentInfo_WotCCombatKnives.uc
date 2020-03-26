@@ -32,7 +32,7 @@ static event OnPostTemplatesCreated()
 		Template = TemplateManager.FindAbilityTemplate(TemplateName);
 		if (Template != none)
 		{
-			`LOG("Musashi patching Template :" @ TemplateName @ "with Musashi_AbilityCooldown",, 'CombatKnife');
+			//`LOG("Musashi patching Template :" @ TemplateName @ "with Musashi_AbilityCooldown",, 'CombatKnife');
 			MusashiCooldown = new class'Musashi_AbilityCooldown';
 			MusashiCooldown.iNumTurns = Template.AbilityCooldown.iNumTurns;
 			MusashiCooldown.AddAbilityBonusCooldown('MusashiKnifeSpecialistCooldown', class'Musashi_CK_AbilitySet'.default.KNIFE_SPECIALIST_COOLDOWN);
@@ -51,7 +51,7 @@ static event OnPostTemplatesCreated()
 /// </summary>
 static event OnLoadedSavedGame()
 {
-	`Log("Musashi CombatKnife : Starting OnLoadedSavedGame",, 'CombatKnife');
+	//`Log("Musashi CombatKnife : Starting OnLoadedSavedGame",, 'CombatKnife');
 
 	UpdateStorage();
 	
@@ -83,12 +83,12 @@ static function UpdateStorage()
 		{
 			if (!XComHQ.HasItem(ItemTemplates[i]))
 			{
-				`Log(ItemTemplates[i].GetItemFriendlyName() @ " not found, adding to inventory",, 'CombatKnife');
+				//`Log(ItemTemplates[i].GetItemFriendlyName() @ " not found, adding to inventory",, 'CombatKnife');
 				NewItemState = ItemTemplates[i].CreateInstanceFromTemplate(NewGameState);
 				NewGameState.AddStateObject(NewItemState);
 				XComHQ.AddItemToHQInventory(NewItemState);
 			} else {
-				`Log(ItemTemplates[i].GetItemFriendlyName() @ " found, skipping inventory add",, 'CombatKnife');
+				//`Log(ItemTemplates[i].GetItemFriendlyName() @ " found, skipping inventory add",, 'CombatKnife');
 			}
 		}
 	}
@@ -132,7 +132,7 @@ static function string DLCAppendSockets(XComUnitPawn Pawn)
 	local string DefaultString, ReturnString;
 	local XComHumanPawn HumanPawn;
 
-	`LOG("DLCAppendSockets" @ Pawn,, 'SpecOpsKnifes');
+	//`LOG("DLCAppendSockets" @ Pawn,, 'SpecOpsKnifes');
 
 	HumanPawn = XComHumanPawn(Pawn);
 	if (HumanPawn == none) { return ""; }
@@ -140,7 +140,7 @@ static function string DLCAppendSockets(XComUnitPawn Pawn)
 	TorsoName = HumanPawn.m_kAppearance.nmTorso;
 	bIsFemale = HumanPawn.m_kAppearance.iGender == eGender_Female;
 
-	`LOG("DLCAppendSockets: Torso= " $ TorsoName $ ", Female= " $ string(bIsFemale),, 'SpecOpsKnifes');
+	//`LOG("DLCAppendSockets: Torso= " $ TorsoName $ ", Female= " $ string(bIsFemale),, 'SpecOpsKnifes');
 
 	foreach default.SocketReplacements(SocketReplacement)
 	{
@@ -162,7 +162,7 @@ static function string DLCAppendSockets(XComUnitPawn Pawn)
 		// did not find, so use default
 		ReturnString = DefaultString;
 	}
-	`LOG("Returning mesh string: " $ ReturnString,, 'LegendaryGear');
+	//`LOG("Returning mesh string: " $ ReturnString,, 'SpecOpsKnifes');
 
 	return ReturnString;
 }
