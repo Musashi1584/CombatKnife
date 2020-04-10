@@ -34,6 +34,9 @@ tags=weapon</Description>
     <Content Include="Config\XComGrimyLootMod.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Config\XComLW_Overhaul.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\XComUI.ini">
       <SubType>Content</SubType>
     </Content>
